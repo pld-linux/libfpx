@@ -68,8 +68,8 @@ mv -f oless/h/wchar.h oless/h/owchar.h
 rm -f missing
 libtoolize --copy --force
 aclocal
-autoconf
-automake -a -c -f --foreign
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
