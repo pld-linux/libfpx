@@ -1,0 +1,48 @@
+diff -Nur libfpx-1.2.0.orig/oless/h/dfmsp.hxx libfpx-1.2.0/oless/h/dfmsp.hxx
+--- libfpx-1.2.0.orig/oless/h/dfmsp.hxx	Sat Dec 23 23:14:57 2000
++++ libfpx-1.2.0/oless/h/dfmsp.hxx	Fri Mar 23 20:43:36 2001
+@@ -15,7 +15,7 @@
+ #include "ref.hxx"
+ #include "ole.hxx"
+ #include "msf.hxx"
+-#include "wchar.h"
++#include "owchar.h"
+ #include <memory.h>
+ #include <string.h>
+ #include "../time.hxx"
+diff -Nur libfpx-1.2.0.orig/oless/h/dir.hxx libfpx-1.2.0/oless/h/dir.hxx
+--- libfpx-1.2.0.orig/oless/h/dir.hxx	Sat Dec 23 23:14:57 2000
++++ libfpx-1.2.0/oless/h/dir.hxx	Fri Mar 23 20:43:22 2001
+@@ -21,7 +21,7 @@
+ 
+ 
+ #include "msf.hxx"
+-#include "wchar.h"
++#include "owchar.h"
+ #include "vect.hxx"
+ 
+ 
+diff -Nur libfpx-1.2.0.orig/oless/h/tchar.h libfpx-1.2.0/oless/h/tchar.h
+--- libfpx-1.2.0.orig/oless/h/tchar.h	Sat Dec 23 23:14:57 2000
++++ libfpx-1.2.0/oless/h/tchar.h	Fri Mar 23 20:43:29 2001
+@@ -12,7 +12,7 @@
+ #ifndef __TCHAR_DEFINED
+ #define __TCHAR_DEFINED
+ #include "ref.hxx"
+-#include "wchar.h"
++#include "owchar.h"
+ 
+ #ifdef _UNICODE
+ 
+diff -Nur libfpx-1.2.0.orig/oless/wchar.c libfpx-1.2.0/oless/wchar.c
+--- libfpx-1.2.0.orig/oless/wchar.c	Sat Dec 23 23:16:37 2000
++++ libfpx-1.2.0/oless/wchar.c	Fri Mar 23 20:42:52 2001
+@@ -5,7 +5,7 @@
+  * 
+  */
+ 
+-#include "h/wchar.h"
++#include "h/owchar.h"
+ #include <errno.h>
+ 
+ #ifndef _tbstowcs

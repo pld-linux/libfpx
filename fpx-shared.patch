@@ -1,0 +1,11 @@
+--- libfpx-1.2.0.orig/configure.in	Fri Dec 22 20:31:58 2000
++++ libfpx-1.2.0/configure.in	Fri Mar 23 21:57:36 2001
+@@ -54,7 +54,7 @@
+ #
+ # Configure libtool and ltdl
+ #
+-AC_ENABLE_SHARED(no)
++AC_ENABLE_SHARED(yes)
+ AC_ENABLE_STATIC(yes)
+ AC_LIBLTDL_CONVENIENCE
+ # Substitute INCLTDL and LIBLTDL in the Makefiles
