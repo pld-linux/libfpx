@@ -8,6 +8,7 @@ Group:		Libraries
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
 Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.gz
+# Source0-md5:	e949f3cb587f8742e100b6e85b5aeea4
 URL:		http://www.i3a.org/i_flashpix.html
 BuildRequires:	autoconf
 BuildRequires:	automake
