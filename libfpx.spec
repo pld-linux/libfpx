@@ -3,12 +3,12 @@ Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
 Name:		fpx
 Version:	1.2.0
 Release:	1
+License:	Distributable (see COPYING for details)
 Group:		Libraries
 Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-License:	Distributable (see COPYING for details)
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
 Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.gz
