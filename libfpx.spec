@@ -69,7 +69,7 @@ rm -f missing
 libtoolize --copy --force
 aclocal
 autoconf
-automake -a -c -f
+automake -a -c -f --foreign
 %configure
 %{__make}
 
