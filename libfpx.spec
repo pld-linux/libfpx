@@ -63,7 +63,8 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--enable-fast-install
 %{__make}
 
 %install
