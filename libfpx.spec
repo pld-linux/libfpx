@@ -3,7 +3,7 @@ Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
 Name:		fpx
 Version:	1.2.0
 Release:	3
-License:	Distributable (see COPYING for details)
+License:	distributable (see COPYING for details)
 Group:		Libraries
 Group(de):	Libraries
 Group(es):	Bibliotecas
