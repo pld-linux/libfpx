@@ -16,6 +16,7 @@ Patch0:		%{name}-wchar-conflict.patch
 Patch1:		%{name}-swap.patch
 Patch2:		%{name}-statfs.patch
 Patch3:		%{name}-shared.patch
+Patch4:		%{name}-nolibrt.patch
 URL:		http://www.digitalimaging.org/i_flashpix.html
 BuildRequires:	autoconf
 BuildRequires:	gcc-c++
@@ -68,6 +69,7 @@ Statyczna wersja biblioteki FlashPIX.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 mv -f oless/h/wchar.h oless/h/owchar.h
 
 %build
@@ -97,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc/*.pdf doc/*.gz
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
+%{_includedir}/*
 
 %files static
 %defattr(644,root,root,755)
