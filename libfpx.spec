@@ -73,6 +73,8 @@ Statyczna wersja biblioteki FlashPIX.
 mv -f oless/h/wchar.h oless/h/owchar.h
 
 %build
+rm -f ltconfig ltmain.sh
+libtoolize --copy --force
 autoconf
 %configure
 %{__make}
