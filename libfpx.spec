@@ -11,7 +11,7 @@ Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version
 URL:		http://www.i3a.org/i_flashpix.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	gcc-c++
 Provides:	fpx
 Obsoletes:	fpx
