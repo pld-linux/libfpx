@@ -1,23 +1,20 @@
 Summary:	FlashPIX OpenSource Toolkit
 Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
-Name:		fpx
-Version:	1.2.0
-Release:	3
+Name:		libfpx
+Version:	1.2.0.4
+Release:	1
 License:	distributable (see COPYING)
 Group:		Libraries
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
 Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.gz
-Patch0:		%{name}-wchar-conflict.patch
-Patch1:		%{name}-swap.patch
-Patch2:		%{name}-statfs.patch
-Patch3:		%{name}-shared.patch
-Patch4:		%{name}-nolibrt.patch
-URL:		http://www.digitalimaging.org/i_flashpix.html
+URL:		http://www.i3a.org/i_flashpix.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	gcc-c++
+Provides:	fpx
+Obsoletes:	fpx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,6 +32,7 @@ Summary:	FlashPIX header file and documentation
 Summary(pl):	Plik nag³ówkowy i dokumentacja do FlashPIX
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Obsoletes:	fpx-devel
 
 %description devel
 FlashPIX header files and programmer's documentation.
@@ -48,6 +46,7 @@ Summary:	FlashPIX static library
 Summary(pl):	Statyczna biblioteka FlashPIX
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
+Obsoletes:	fpx-static
 
 %description static
 Static version of FlashPIX library.
@@ -56,13 +55,7 @@ Static version of FlashPIX library.
 Statyczna wersja biblioteki FlashPIX.
 
 %prep
-%setup -q -n lib%{name}-%{version}
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-mv -f oless/h/wchar.h oless/h/owchar.h
+%setup  -q
 
 %build
 rm -f missing
