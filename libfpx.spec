@@ -5,13 +5,6 @@ Version:	1.2.0
 Release:	3
 License:	distributable (see COPYING for details)
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
 Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.gz
@@ -41,13 +34,6 @@ FlashPIX, do ktСrej przyczyniЁ siЙ Eastman Kodak Company.
 Summary:	FlashPIX header file and documentation
 Summary(pl):	Plik nagЁСwkowy i dokumentacja do FlashPIX
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -61,13 +47,6 @@ biblioteki FlashPIX oraz dokumentacja do tej biblioteki.
 Summary:	FlashPIX static library
 Summary(pl):	Statyczna biblioteka FlashPIX
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
