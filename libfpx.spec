@@ -1,19 +1,19 @@
 Summary:	FlashPIX OpenSource Toolkit
 Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
 Name:		libfpx
-Version:	1.2.0.6
+Version:	1.2.0.9
 Release:	1
 License:	distributable (see COPYING)
 Group:		Libraries
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
-Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.gz
-# Source0-md5:	e949f3cb587f8742e100b6e85b5aeea4
+Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.bz2
+# Source0-md5:	aa9a74dbcacbd5884c9aa3d4c97f9db7
 URL:		http://www.i3a.org/i_flashpix.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool >= 2:1.4d
-BuildRequires:	gcc-c++ >= 3.2.2
+BuildRequires:	libstdc++-devel >= 3.2.2
 Provides:	fpx
 Obsoletes:	fpx
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
