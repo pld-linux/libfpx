@@ -1,17 +1,18 @@
 Summary:	FlashPIX OpenSource Toolkit
 Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
 Name:		libfpx
-Version:	1.2.0.9
+Version:	1.2.0.11
 Release:	1
 License:	distributable (see COPYING)
 Group:		Libraries
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
 Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.bz2
-# Source0-md5:	aa9a74dbcacbd5884c9aa3d4c97f9db7
+# Source0-md5:	96f4b64d0513956206731a2302de4eca
+Patch0:		%{name}-fix.patch
 URL:		http://www.i3a.org/i_flashpix.html
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.55
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	libstdc++-devel >= 3.2.2
 Provides:	fpx
@@ -32,7 +33,7 @@ FlashPIX, do której przyczyni³ siê Eastman Kodak Company.
 Summary:	FlashPIX header file and documentation
 Summary(pl):	Plik nag³ówkowy i dokumentacja do FlashPIX
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Obsoletes:	fpx-devel
 
 %description devel
@@ -46,7 +47,7 @@ biblioteki FlashPIX oraz dokumentacja do tej biblioteki.
 Summary:	FlashPIX static library
 Summary(pl):	Statyczna biblioteka FlashPIX
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	fpx-static
 
 %description static
@@ -56,10 +57,10 @@ Static version of FlashPIX library.
 Statyczna wersja biblioteki FlashPIX.
 
 %prep
-%setup  -q
+%setup -q
+%patch0 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -71,7 +72,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -82,15 +84,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libfpx.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/*.pdf doc/readme.txt
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*
+%attr(755,root,root) %{_libdir}/libfpx.so
+%{_libdir}/libfpx.la
+%{_includedir}/fpxlib.h
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libfpx.a
