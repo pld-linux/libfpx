@@ -2,7 +2,7 @@ Summary:	FlashPIX OpenSource Toolkit
 Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
 Name:		fpx
 Version:	1.2.0
-Release:	2
+Release:	3
 License:	Distributable (see COPYING for details)
 Group:		Libraries
 Group(de):	Libraries
@@ -19,6 +19,8 @@ Patch3:		%{name}-shared.patch
 Patch4:		%{name}-nolibrt.patch
 URL:		http://www.digitalimaging.org/i_flashpix.html
 BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	gcc-c++
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -73,9 +75,11 @@ Statyczna wersja biblioteki FlashPIX.
 mv -f oless/h/wchar.h oless/h/owchar.h
 
 %build
-rm -f ltconfig ltmain.sh
+rm -f missing
 libtoolize --copy --force
+aclocal
 autoconf
+automake -a -c
 %configure
 %{__make}
 
