@@ -1,18 +1,18 @@
+#
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	FlashPIX OpenSource Toolkit
 Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
 Name:		libfpx
-Version:	1.2.0.12
+Version:	1.2.0.13
 Release:	1
 License:	distributable (see COPYING)
 Group:		Libraries
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
 Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.bz2
-# Source0-md5:	a82d33cc0ede71752802da0f410398b8
-Patch0:		%{name}-fix.patch
+# Source0-md5:	5e781a17ec96e8f9af8c2ff319e8d706
 URL:		http://www.i3a.org/i_flashpix.html
 BuildRequires:	autoconf >= 2.55
 BuildRequires:	automake >= 1:1.9
@@ -61,7 +61,6 @@ Statyczna wersja biblioteki FlashPIX.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
