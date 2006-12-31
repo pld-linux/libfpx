@@ -6,7 +6,7 @@ Summary:	FlashPIX OpenSource Toolkit
 Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
 Name:		libfpx
 Version:	1.2.0.13
-Release:	1
+Release:	2
 License:	distributable (see COPYING)
 Group:		Libraries
 # Strange... [URL] says you can order it (for money) and doesn't contain any
