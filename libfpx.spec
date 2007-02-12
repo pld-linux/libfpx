@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	FlashPIX OpenSource Toolkit
-Summary(pl):	Biblioteka do obróbki obrazków FlashPIX
+Summary(pl.UTF-8):   Biblioteka do obrÃ³bki obrazkÃ³w FlashPIX
 Name:		libfpx
 Version:	1.2.0.13
 Release:	2
@@ -27,14 +27,14 @@ FlashPIX OpenSource Toolkit is based on source obtained from the
 Digital Imaging Group Inc. and includes a sample FlashPIX library
 implementation contributed by Eastman Kodak Company.
 
-%description -l pl
-FlashPIX OpenSource Toolkit jest bazowany na ¼ród³ach uzyskanych od
-Digital Imaging Group i zawiera przyk³adow± implementacjê biblioteki
-FlashPIX, do której przyczyni³ siê Eastman Kodak Company.
+%description -l pl.UTF-8
+FlashPIX OpenSource Toolkit jest bazowany na ÅºrÃ³dÅ‚ach uzyskanych od
+Digital Imaging Group i zawiera przykÅ‚adowÄ… implementacjÄ™ biblioteki
+FlashPIX, do ktÃ³rej przyczyniÅ‚ siÄ™ Eastman Kodak Company.
 
 %package devel
 Summary:	FlashPIX header file and documentation
-Summary(pl):	Plik nag³ówkowy i dokumentacja do FlashPIX
+Summary(pl.UTF-8):   Plik nagÅ‚Ã³wkowy i dokumentacja do FlashPIX
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	fpx-devel
@@ -42,13 +42,13 @@ Obsoletes:	fpx-devel
 %description devel
 FlashPIX header files and programmer's documentation.
 
-%description devel -l pl
-Plik nag³ówkowy potrzebny do kompilowania programów korzystaj±cych z
+%description devel -l pl.UTF-8
+Plik nagÅ‚Ã³wkowy potrzebny do kompilowania programÃ³w korzystajÄ…cych z
 biblioteki FlashPIX oraz dokumentacja do tej biblioteki.
 
 %package static
 Summary:	FlashPIX static library
-Summary(pl):	Statyczna biblioteka FlashPIX
+Summary(pl.UTF-8):   Statyczna biblioteka FlashPIX
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	fpx-static
@@ -56,7 +56,7 @@ Obsoletes:	fpx-static
 %description static
 Static version of FlashPIX library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna wersja biblioteki FlashPIX.
 
 %prep
