@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	FlashPIX OpenSource Toolkit
-Summary(pl.UTF-8):   Biblioteka do obróbki obrazków FlashPIX
+Summary(pl.UTF-8):	Biblioteka do obróbki obrazków FlashPIX
 Name:		libfpx
 Version:	1.2.0.13
 Release:	2
@@ -34,7 +34,7 @@ FlashPIX, do której przyczynił się Eastman Kodak Company.
 
 %package devel
 Summary:	FlashPIX header file and documentation
-Summary(pl.UTF-8):   Plik nagłówkowy i dokumentacja do FlashPIX
+Summary(pl.UTF-8):	Plik nagłówkowy i dokumentacja do FlashPIX
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	fpx-devel
@@ -48,7 +48,7 @@ biblioteki FlashPIX oraz dokumentacja do tej biblioteki.
 
 %package static
 Summary:	FlashPIX static library
-Summary(pl.UTF-8):   Statyczna biblioteka FlashPIX
+Summary(pl.UTF-8):	Statyczna biblioteka FlashPIX
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	fpx-static
