@@ -5,16 +5,16 @@
 Summary:	FlashPIX OpenSource Toolkit
 Summary(pl.UTF-8):	Biblioteka do obróbki obrazków FlashPIX
 Name:		libfpx
-Version:	1.2.0.13
-Release:	2
+Version:	1.3.0
+Release:	1
 License:	distributable (see COPYING)
 Group:		Libraries
 # Strange... [URL] says you can order it (for money) and doesn't contain any
 # link, but sources can be freely redistributed. Can be found on any IM mirror.
-Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}.tar.bz2
-# Source0-md5:	5e781a17ec96e8f9af8c2ff319e8d706
+Source0:	ftp://ftp.simplesystems.org/pub/ImageMagick/delegates/%{name}-%{version}-0.tar.bz2
+# Source0-md5:	5889caa6af6d5f751ba8ca2862e5f384
 URL:		http://www.i3a.org/i_flashpix.html
-BuildRequires:	autoconf >= 2.55
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	libstdc++-devel >= 3.2.2
@@ -88,6 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/libfpx.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libfpx.so.1
 
 %files devel
 %defattr(644,root,root,755)
@@ -95,6 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libfpx.so
 %{_libdir}/libfpx.la
 %{_includedir}/fpxlib.h
+%{_includedir}/fpxlib-config.h
 
 %if %{with static_libs}
 %files static
