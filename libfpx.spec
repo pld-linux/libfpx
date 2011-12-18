@@ -14,7 +14,7 @@ Group:		Libraries
 Source0:	ftp://ftp.imagemagick.org/pub/ImageMagick/delegates/%{name}-%{version}-1.tar.xz
 # Source0-md5:	69c6bf377fe68b575af12a26a6ba076b
 Patch0:		%{name}-link.patch
-URL:		http://www.i3a.org/technologies/digital-photography/flashpix/
+URL:		http://www.i3a.org/technologies/digitalimaging/flashpix/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	libtool >= 2:1.5
