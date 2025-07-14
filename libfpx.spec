@@ -62,7 +62,7 @@ Statyczna wersja biblioteki FlashPIX.
 
 %prep
 %setup -q -n %{name}-1.3.1-10
-%patch0 -p1
+%patch -P0 -p1
 
 ln -f flashpix.h COPYING
 
