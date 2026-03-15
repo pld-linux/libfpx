@@ -6,12 +6,13 @@ Summary:	FlashPIX OpenSource Toolkit
 Summary(pl.UTF-8):	Biblioteka do obróbki obrazków FlashPIX
 Name:		libfpx
 Version:	1.3.1.10
-Release:	1
+Release:	2
 License:	distributable (see COPYING)
 Group:		Libraries
 Source0:	http://www.imagemagick.org/download/delegates/%{name}-1.3.1-10.tar.xz
 # Source0-md5:	6855850cde24262e3d7fd7b8514d0b1d
 Patch0:		%{name}-link.patch
+Patch1:		%{name}-gcc10.patch
 URL:		http://www.imagemagick.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.11
@@ -63,6 +64,7 @@ Statyczna wersja biblioteki FlashPIX.
 %prep
 %setup -q -n %{name}-1.3.1-10
 %patch -P0 -p1
+%patch -P1 -p1
 
 ln -f flashpix.h COPYING
 
